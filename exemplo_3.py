@@ -5,15 +5,16 @@ from dash_bootstrap_templates import load_figure_template
 from src import utils
 
 import dash_bootstrap_components as dbc
-from dash import Input, Output, State, html
-from dash_bootstrap_components._components.Container import Container
-
-PLOTLY_LOGO = "https://images.plot.ly/logo/new-branding/plotly-logomark.png"
-
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 app = Dash(external_stylesheets=external_stylesheets)
 
+
+import dash_bootstrap_components as dbc
+from dash import Input, Output, State, html
+from dash_bootstrap_components._components.Container import Container
+
+PLOTLY_LOGO = "https://images.plot.ly/logo/new-branding/plotly-logomark.png"
 
 search_bar = dbc.Row(
     [
@@ -29,7 +30,7 @@ search_bar = dbc.Row(
     align="center",
 )
 
-navbar = dbc.Navbar(
+app.layout = dbc.Navbar(
     dbc.Container(
         [
             html.A(

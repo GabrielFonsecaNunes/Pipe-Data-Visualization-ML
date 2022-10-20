@@ -13,7 +13,7 @@ app = Dash(external_stylesheets=external_stylesheets)
 
 app.layout = html.Div(
     children=[
-         html.Div(
+        html.Div(
             children=[
                 html.B('Codigo Modelo'),
                 dcc.Dropdown(
@@ -24,7 +24,15 @@ app.layout = html.Div(
                     multi=False,
                     id='dropdown_cod_modelo'
                 )
-            ], style=dict(width='20%', display='inline-block', text_align = 'justify'),
+            ],
+            style=dict(
+                width='20%',
+                #display='inline-block',
+                marginTop='10px',
+                marginRight='10px',
+                marginBottom='10px',
+                marginLeft='10px'
+            ),
         ),
 
         html.Div(
@@ -45,7 +53,15 @@ app.layout = html.Div(
                     multi=True,
                     optionHeight=50,
                 ),
-            ],  style=dict(width='20%', display='inline-block'),
+            ],
+            style=dict(
+                width='20%',
+                #display='inline-block',
+                marginTop='10px',
+                marginRight='10px',
+                marginBottom='10px',
+                marginLeft='10px'
+            ),
         ),
         html.Div(
             children=[
@@ -66,7 +82,15 @@ app.layout = html.Div(
                     optionHeight=50,
                     multi=True
                 ),
-            ],  style=dict(width='20%', display='inline-block'),
+            ],
+            style=dict(
+                width='20%',
+                #display='inline-block',
+                marginTop='10px',
+                marginRight='10px',
+                marginBottom='10px',
+                marginLeft='10px'
+            ),
         ),
 
         html.Div(
@@ -89,7 +113,13 @@ app.layout = html.Div(
                     maxHeight=700,
                     multi=True
                 ),
-            ], style=dict(width='20%',  display='inline-block'),
+            ], style=dict(
+                width='20%',
+                #display='inline-block',
+                marginTop='10px',
+                marginRight='10px',
+                marginBottom='10px',
+                marginLeft='10px'),
         ),
     ]
 )
